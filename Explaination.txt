@@ -138,6 +138,120 @@ if (matches) {
 Is line mein, matches ko check kiya jata hai. Agar matches milte hain to is block mein chala jayega, warna else block mein chala jayega.
 s = s.replace(regex, 'NayaText');
 Is line mein, agar matches milte hain to s mein se regex ke matches ko 'NayaText' se replace kar diya jata hai.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Final Explations  Read Only this Para
+
+
+
+
+
+
+
+
+
+
+
+
+Beshak! Yahan diye gaye HTML aur JavaScript code ko line by line Roman Urdu mein explain kiya gaya hai:
+
+html
+Copy code
+<!doctype html>
+Yeh tag document type ko define karta hai ke yeh HTML5 ka document hai.
+html
+Copy code
+<html>
+Yeh tag HTML document ko shuru karta hai.
+html
+Copy code
+<head>
+<title>Complete JavaScript Course</title>
+</head>
+<head> tag ke andar, HTML document ki head section shuru hoti hai. <title> tag se document ka title set hota hai, yahan "Complete JavaScript Course".
+html
+Copy code
+<body>
+<body> tag ke andar, HTML document ki body section shuru hoti hai.
+html
+Copy code
+<div id="output">Complete JavaScript Course</div>
+<div> tag se ek division create hoti hai jiska ID "output" hai, aur isme text "Complete JavaScript Course" shamil hai.
+html
+Copy code
+Search for:
+<input id="sText" type="text">
+<br> Replace with:
+<input id="rText" type="text">
+<br>
+Yahan do input fields hain, ek jismein search karnay ke liye text dalna hai (sText ID ke sath), aur doosre mein replace karne ke liye text dalna hai (rText ID ke sath).
+html
+Copy code
+<button id="replaceButton">Replace</button>
+<button> tag se ek button create hota hai jiska ID "replaceButton" hai, aur is par "Replace" likha hua hai.
+html
+Copy code
+<script>
+    // Step 1: JavaScript mein teen page elements ko chunain aur unhein variables mein assign karein
+    var outputElement = document.getElementById('output');
+    var searchInput = document.getElementById('sText');
+    var replaceInput = document.getElementById('rText');
+    var replaceButton = document.getElementById('replaceButton');
+
+    // Step 2: Button par click karne ke liye event listener shamil karein
+    replaceButton.addEventListener('click', lookup);
+
+    // Step 3: 'lookup' function banayein
+    function lookup() {
+        // 's' naam se variable mein output element ka text content assign karein
+        var s = outputElement.textContent;
+
+        // 'rt' naam se variable mein replace karne wale input ka value assign karein
+        var rt = searchInput.value;
+
+        // Step 4: Pehle input field ki value se naya regex banayein
+        var regex = new RegExp(rt, 'g');
+
+        // Regex ke sath match() method ka istemal karke match dhoondhein
+        var matches = s.match(regex);
+
+        // Agar matches milte hain to isse mutalliq code block chalayein
+        if (matches) {
+            // Step 5: Agar match milta hai to replace() ka istemal karke naya value set karein
+            s = s.replace(regex, replaceInput.value);
+
+            // Step 6: Output area ko naye aur updated text ke sath update karein
+            outputElement.textContent = s;
+        } else {
+            alert('Koi match nahi mila.');
+        }
+    }
+</script>
+<script> tag ke andar, JavaScript code diya gaya hai:
+
+Step 1: Teen page elements ko select karke unhein variables mein assign kiya gaya hai.
+
+Step 2: Button par click hone par lookup function ko invoke karne ke liye event listener add kiya gaya hai.
+
+Step 3: lookup function banaya gaya hai jo text ko find aur replace karega.
+
+Step 4: searchInput se li gayi value se naya regex banaya gaya hai.
+
+Step 5: Matches milte hain to replace() ka istemal karke naya value set kiya jata hai.
+
+Step 6: Output area ko updated text ke sath update kiya jata hai. Agar koi match nahi milta to ek alert message dikhaya jata hai.
 outputElement.textContent = s;
 Is line mein, outputElement ki text content ko updated s ke sath set kiya jata hai.
 } else {
