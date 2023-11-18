@@ -1,0 +1,48 @@
+1. Jvascript hoisting 
+
+
+
+var x;
+x = 5;
+console.log(x);   // 5 mil gaya
+pehle declr kiya phr value assin ki
+
+
+x = 5;
+console.log(x);  // wrong satement
+var x;
+mgr 5 a jae ga according to javascript
+ye srif var m ho ga var global h 
+agr let or const m krein tw run nhi ho ga error ae ga
+
+var ka istamal cm se cm krein or let or const used kree
+var ko km use karee
+
+2 . Stict MODE
+
+abi hm normal mode chala rhy h ab Strict miode smhje ge 
+hum ne ik function banaya say hi bargr var let const ke
+
+"use strict";  // varribale 
+
+function sayHi() {
+greeting = "Hello!";
+console.log(greeting);
+
+ye run ho gae ga kiu ke koi var let ya const use nhi kiya is liyee is ak global varribale ho gaya jo pure code m khi bi used ho gae ga 
+ye ak javascript Default Behaviour h 
+Default behvoir ye hota h
+
+agr hum nhi chate k asa ho tw hum javascript is ko sctrict check kare 
+ab strict mode m check krne k liyee file k start m use Strict type kr de ab file Stirct mode on ho gaya h ab normal mode nhi h yani kch bi galat ho tw error ho ga
+use strict End bi bi ho ga lkn recommndede h k uper lage file k start m 
+is Called Strict mode
+
+
+
+
+
+
+
+
+
