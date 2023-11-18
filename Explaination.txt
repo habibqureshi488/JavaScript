@@ -1,0 +1,56 @@
+Barabar se samajhne ke liye har line ko Roman Urdu mein tafsili tor par explain kar raha hoon:
+
+javascript
+Copy code
+var inputElement = document.getElementById('inputText');
+Is line mein, 'inputText' ID wale HTML element ko JavaScript mein inputElement variable mein store kiya gaya hai. Isse yeh element easily refer kiya ja sakta hai.
+javascript
+Copy code
+var replaceButton = document.getElementById('replaceButton');
+Is line mein, 'replaceButton' ID wale HTML button ko JavaScript mein replaceButton variable mein store kiya gaya hai. Isse yeh button easily refer kiya ja sakta hai.
+javascript
+Copy code
+var outputElement = document.getElementById('output');
+Is line mein, 'output' ID wale HTML element ko JavaScript mein outputElement variable mein store kiya gaya hai. Isse yeh element easily refer kiya ja sakta hai.
+javascript
+Copy code
+replaceButton.addEventListener('click', lookup);
+Is line mein, button par click hone par lookup function ko invoke karne ke liye event listener add kiya gaya hai. Yani, jab button click hoga to lookup function chalega.
+javascript
+Copy code
+function lookup() {
+Is line mein, lookup naam ka ek naya function define kiya gaya hai. Yeh function text ko find aur replace karne ke liye banaya gaya hai.
+javascript
+Copy code
+var s = outputElement.textContent;
+Is line mein, outputElement se text content nikala gaya hai aur s variable mein store kiya gaya hai.
+javascript
+Copy code
+var rt = inputElement.value;
+Is line mein, inputElement se value nikali gayi hai aur rt variable mein store ki gayi hai.
+javascript
+Copy code
+var regex = new RegExp(rt, 'g');
+Is line mein, rt variable ki value se naya regular expression (regex) banaya gaya hai. 'g' flag regular expression ko global search ke liye set karta hai.
+javascript
+Copy code
+var matches = s.match(regex);
+Is line mein, s mein se regex ke matches nikale gaye hain aur unhein matches variable mein store kiya gaya hai.
+javascript
+Copy code
+if (matches) {
+Is line mein, matches ko check kiya jata hai. Agar matches milte hain to is block mein chala jayega, warna else block mein chala jayega.
+javascript
+Copy code
+s = s.replace(regex, 'ReplacementText');
+Is line mein, agar matches milte hain to s mein se regex ke matches ko 'ReplacementText' se replace kar diya jata hai.
+javascript
+Copy code
+outputElement.textContent = s;
+Is line mein, outputElement ki text content ko updated s ke sath set kiya jata hai.
+javascript
+Copy code
+} else {
+    alert('No matches found.');
+}
+Is block mein, agar matches nahi milte to ek alert message show ki jati hai ki 'No matches found.'
