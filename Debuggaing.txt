@@ -1,0 +1,21 @@
+Debugging 
+
+Important Topic 
+
+1.Error find krna 
+2.error Solve krna 
+
+solve the bug is called debugging
+
+1. console .   // se check kr skate h 
+
+Right click kr ke inspect pr ja kr 
+1 Element 
+2 Console 
+3 Source 
+p ja kr debuggaing hoti h
+
+
+
+
+
